@@ -1,13 +1,13 @@
 import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
 import { Web3Modal } from '@web3modal/react'
 import { configureChains, createClient, WagmiConfig } from 'wagmi'
-import { arbitrum, mainnet, polygon, bsc } from 'wagmi/chains'
+import { arbitrum, mainnet, polygon, bsc, cronos } from 'wagmi/chains'
 
 import { Web3Button } from '@web3modal/react'
 import Navbar from './components/Navbar'
 import Texts from './components/Texts'
 
-const chains = [arbitrum, mainnet, polygon, bsc]
+const chains = [arbitrum, mainnet, polygon, bsc, cronos]
 const projectId = '6f0c5fe7fc24b43690934804bcb4fa62'
 
 const { provider } = configureChains(chains, [w3mProvider({ projectId })])
